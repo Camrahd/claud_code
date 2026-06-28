@@ -14,11 +14,16 @@ chromadb:
  persist_dir: .chromadb/
  collection_name: codebase
 
+qdrant:
+ collection_name: sample_project1
+
+rag:
+ mode: hybrid           # semantic | hybrid
+
+
 vector_store:
  provider: qdrant
-
-qdrant:
- collection_name: codebase
+ retrieval_mode: hybrid  # dense | sparse | hybrid
 
 
 elasticsearch:

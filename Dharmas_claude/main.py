@@ -41,8 +41,8 @@ def initialize():
 
 
 def run():
-   logger.info("Starting Educosys Claude")
-   console.print("\n[bold blue]Educosys Claude[/bold blue] — RAG-powered code assistant")
+   logger.info("Starting Dharmas new Claude")
+   console.print("\n[bold blue]Dharmas Claude[/bold blue] — RAG-powered code assistant")
 
 
    llm, embedder, index = initialize()
