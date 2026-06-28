@@ -94,17 +94,11 @@ def run():
          question = user_input.removeprefix("/ask ").strip()
          logger.info(f"Ask command received: {question}")
          console.print(f"[dim]Searching for: {question}...[/dim]")
-         # TODO: call retriever + LLM
+         response = handle_query(question)
+         console.print(response)
      elif user_input == "/show_semantic_index":
          logger.info("Showing semantic index")
          show_semantic_index(collection)
-     elif user_input.startswith("/ask "):
-         question = user_input.removeprefix("/ask ").strip()
-         logger.info(f"Ask command received: {question}")
-         console.print(f"[dim]Searching for: {question}...[/dim]")
-         response = handle_query(question)
-         console.print(response)
-
      else:
          logger.warning(f"Unknown command received: {user_input}")
          console.print("[yellow]Unknown command. Try:[/yellow]")
